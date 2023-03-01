@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+  <link rel="icon" href="devchallenges.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+
+  <title>Devchallenges</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  <main class="checkout">
+    <form id="checkout--form">
+      <section class="checkout--products">
+        <div class="product">
+          <div class="product--container">
+            <div class="image--div">
+              <img src="./assets/img/photo1.png" alt="product-1">
+            </div>
+            <div class="product--info">
+              <p>
+                <strong>Vintage Backbag</strong>
+              </p>
+              <div class="product--prices">
+                <p>$54.99</p>
+                <p>
+                  $94.99
+                </p>
+              </div>
+
+              <div class="product--add">
+                <span class="minus material-symbols-outlined">
+                  remove
+                </span>
+                <input type="number" class="input--product" min="0" max="100" required value="1">
+                <span class="minus material-symbols-outlined">
+                  add
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout--total">
+          <p class="total--as--table">
+            <span>Shipping</span>
+            <span>$19</span>
+          </p>
+          <p class="total--as--table">
+            <span>Total</span>
+            <span>$19</span>
+          </p>
+        </div>
+      </section>
+    </form>
+  </main>
+</body>
+
+</html>
