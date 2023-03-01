@@ -1,0 +1,161 @@
+/*
+design by Emmanuel Lucio Urbina
+@emmanuelluur
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray--p: #4E5150;
+    --orange: #F2994A;
+}
+
+body {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+header {
+    margin: 32px 18px 20px 18px;
+    color: var(--gray--p);
+}
+
+.checkout {
+    margin: 0px 18px 20px 18px;
+}
+
+.checkout--products {
+    background: #F2F2F2;
+    border-radius: 12px;
+    padding: 30px 25px 13px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.product--container {
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+}
+
+.product--prices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product--info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product--info>p {
+    color: var(--gray--p);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+
+}
+
+.product--prices p:nth-child(1) {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--orange);
+}
+
+.product--prices p:nth-child(2) {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    text-decoration-line: line-through;
+    color: var(--gray--p);
+}
+
+.product--add {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #828282;
+    border-radius: 12px;
+    padding: 16.62px 10.15px;
+}
+
+.btn--1 {
+    outline: none;
+    cursor: pointer;
+    background: #E0E0E0;
+    border-radius: 4px;
+    padding: 3.9px 3.9px;
+    color: #828282;
+    font-weight: 600;
+}
+
+.btn--1:hover {
+    outline: none;
+    background-color: #828282;
+    color: #4E5150;
+}
+
+.input--product {
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    /* Gray 1 */
+    background-color: transparent;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.checkout--total {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.total--1,
+.total--2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 9px 0;
+
+    /* Gray 1 */
+
+    color: #333333;
+}
+
+.bordered-x {
+    border-top: solid 1px #BDBDBD;
+    border-bottom: solid 1px #BDBDBD;
+}
+
+.image--div img {
+    width: 122.75px;
+    height: 124.64px;
+    border-radius: 13px;
+    transform: rotate(-0.02deg);
+}
