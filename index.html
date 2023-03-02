@@ -15,11 +15,14 @@
   <title>Devchallenges</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+  </style>
+  <link rel="stylesheet" href="./assets/css/main.css">
   <style>
     .material-symbols-outlined {
       font-variation-settings:
-        'FILL' 0,
+        'FILL' 1,
         'wght' 400,
         'GRAD' 0,
         'opsz' 48
@@ -33,7 +36,7 @@
     <h1>Checkout</h1>
   </header>
   <main class="checkout">
-    <form id="checkout--form">
+    <form class="checkout--form">
       <section class="checkout--products">
         <div class="product">
           <div class="product--container">
@@ -52,11 +55,40 @@
               </div>
 
               <div class="product--add">
-                <span class="minus material-symbols-outlined">
+                <span class="btn--1 material-symbols-outlined">
                   remove
                 </span>
                 <input type="number" class="input--product" min="0" max="100" required value="1">
-                <span class="minus material-symbols-outlined">
+                <span class="btn--1 material-symbols-outlined">
+                  add
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product--container">
+            <div class="image--div">
+              <img src="./assets/img/photo2.png" alt="product-2">
+            </div>
+            <div class="product--info">
+              <p>
+                <strong>Vintage Backbag</strong>
+              </p>
+              <div class="product--prices">
+                <p>$54.99</p>
+                <p>
+                  $94.99
+                </p>
+              </div>
+
+              <div class="product--add">
+                <span class="btn--1 material-symbols-outlined">
+                  remove
+                </span>
+                <input type="number" class="input--product" min="0" max="100" required value="1">
+                <span class="btn--1 material-symbols-outlined">
                   add
                 </span>
               </div>
@@ -65,18 +97,145 @@
         </div>
 
         <div class="checkout--total">
-          <p class="total--as--table">
+          <p class="total--1 bordered-x">
             <span>Shipping</span>
             <span>$19</span>
           </p>
-          <p class="total--as--table">
+          <p class="total--2">
             <span>Total</span>
             <span>$19</span>
           </p>
         </div>
       </section>
+
+      <section class="checkout--address">
+        <div class="c--container">
+          <article class="contact">
+            <h3>Contact information</h3>
+            <div class="information">
+              <div class="control--group">
+                <label for="email">E-mail</label>
+                <div class="input--icon">
+                  <span class="material-symbols-outlined ch-icon">
+                    mail
+                  </span>
+                  <input type="email" name="mail" id="mail" placeholder="Enter your email..." required>
+                </div>
+              </div>
+
+              <div class="control--group">
+                <label for="phone">Phone</label>
+                <div class="input--icon">
+                  <span class="material-symbols-outlined ch-icon">
+                    phone
+                  </span>
+                  <input type="tel" name="phone" id="phone" placeholder="Enter your phone..." required>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="shipping">
+            <h3>Shipping address</h3>
+            <div class="information">
+              <div class="control--group">
+                <label for="address">Full name</label>
+                <div class="input--icon">
+                  <span class="material-symbols-outlined ch-icon">
+                    account_circle
+                  </span>
+                  <input type="text" name="address" id="address" placeholder="Enter your full name..." required>
+                </div>
+              </div>
+
+              <div class="control--group">
+                <label for="f_name">Address</label>
+                <div class="input--icon">
+                  <span class="material-symbols-outlined ch-icon">
+                    home
+                  </span>
+                  <input type="text" name="f_name" id="f_name" placeholder="Your address..." required>
+                </div>
+              </div>
+
+              <div class="control--group">
+                <label for="city">City</label>
+                <div class="input--icon">
+                  <span class="material-symbols-outlined ch-icon">
+                    location_city
+                  </span>
+                  <input type="text" name="city" id="city" placeholder="Your city..." required>
+                </div>
+              </div>
+
+              <div class="d-f">
+                <div class="control--group city__rel">
+                  <label for="country">Country</label>
+                  <div class="input--icon">
+                    <span class="material-symbols-outlined ch-icon">
+                      public
+                    </span>
+                    <input type="text" name="country" id="country" placeholder="Your country..." required>
+                    <span class="btn--expand material-symbols-outlined" id="expand__menu">
+                      expand_more
+                    </span>
+                    <article class="city__menu">
+                      <h5>Cities</h5>
+                      <ul>
+                        <li onclick="get_this_value(this)">1</li>
+                        <li onclick="get_this_value(this)">2</li>
+                        <li onclick="get_this_value(this)">3</li>
+                        <li onclick="get_this_value(this)">4</li>
+                        <li onclick="get_this_value(this)">5</li>
+                        <li onclick="get_this_value(this)">1</li>
+                        <li onclick="get_this_value(this)">2</li>
+                        <li onclick="get_this_value(this)">3</li>
+                        <li onclick="get_this_value(this)">4</li>
+                        <li onclick="get_this_value(this)">5</li>
+                      </ul>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="control--group">
+                  <label for="postal_code">Postal code</label>
+                  <div class="input--icon">
+                    <span class="material-symbols-outlined ch-icon">
+                      markunread_mailbox
+                    </span>
+                    <input type="number" name="postal_code" id="postal_code" placeholder="Your postal code..." required>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+        <button type="button" class="btn--success">Continue</button>
+      </section>
+
+
     </form>
   </main>
+
+
+  <script>
+    const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      const expand__menu = document.querySelector("#expand__menu");
+      expand__menu.addEventListener("click", (e) => {
+        document.querySelector(".city__menu").classList.toggle("show__menu")
+      })
+    })
+
+    function get_this_value(item) {
+      let value = item.textContent;
+      console.log(value);
+    }
+  </script>
 </body>
 
 </html>
