@@ -48,6 +48,9 @@ header {
     display: flex;
     flex-direction: column;
     gap: 28px;
+
+    max-width: 383px;
+    max-height: 550px;
 }
 
 .product--container {
@@ -153,6 +156,7 @@ header {
 
     color: #333333;
 }
+
 .btn--expand {
     outline: none;
     cursor: pointer;
@@ -173,6 +177,7 @@ header {
     background-color: #828282;
     color: white;
 }
+
 .bordered-x {
     border-top: solid 1px #BDBDBD;
     border-bottom: solid 1px #BDBDBD;
@@ -202,11 +207,13 @@ header {
     border-radius: 12px;
     padding: 17px 45px;
 }
+
 .c--container {
     display: flex;
     flex-direction: column;
     gap: 45px;
 }
+
 .checkout--address {
     display: flex;
     flex-direction: column;
@@ -226,13 +233,15 @@ header {
     color: #4F4F4F;
 }
 
-.contact, .shipping {
+.contact,
+.shipping {
     display: flex;
     flex-direction: column;
     gap: 11px;
 }
 
-.contact h3, .shipping h3 {
+.contact h3,
+.shipping h3 {
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -280,21 +289,21 @@ header {
     gap: 16.5px;
 }
 
-.d-f{
+.d-f {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
 }
 
-.city__rel{
+.city__rel {
     position: relative;
 }
 
 
 
 
-.city__menu{
+.city__menu {
     display: none;
     background-color: #f2f2f2;
     position: absolute;
@@ -303,36 +312,40 @@ header {
     overflow-y: scroll;
     top: 65px;
     border-radius: 15px;
-   
+
     left: 0;
     padding: 15px 0;
-    
+
 }
+
 .city__menu h5 {
     text-align: center;
 }
+
 .show__menu {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    
+
 }
+
 .item__menu {
     cursor: pointer;
     padding: 5px 10px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.item__menu:hover{
+.item__menu:hover {
     background-color: var(--orange);
     border: solid 1px #ee7811;
     color: white;
 }
+
 /*class to errro validate*/
 
-.error--validate .input--icon{
+.error--validate .input--icon {
     border-width: 2px;
     border-color: #842029;
 }
@@ -342,6 +355,141 @@ header {
     color: #842029 !important;
 }
 
-.error--validate span, .error--validate label {
+.error--validate span,
+.error--validate label {
     color: #842029;
+}
+
+.checkbox {
+    display: flex;
+    gap: 7.78px;
+    align-items: center;
+}
+
+.checkbox .chk {
+    width: 16px;
+    height: 15px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+}
+
+.checkbox p {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #4F4F4F;
+}
+
+.footer {
+    text-align: center;
+    padding: 0 24px 24px 24px;
+}
+
+.footer p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #BDBDBD;
+}
+.footer p a {
+    color: #BDBDBD;
+}
+@media screen and (min-width: 900px) {
+    header {
+        max-width: 962px;
+        margin: 64px auto 50px auto;
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .checkout--form {
+        max-width: 962px;
+
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .btn--success {
+        align-self: end;
+    }
+
+    .control--group label {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .input--icon input {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .btn--expand {
+
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .contact,
+    .shipping {
+        gap: 15px;
+    }
+
+    .contact h3,
+    .shipping h3 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+
+
+
+    .product--info>p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .product--prices p:nth-child(1) {
+
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+
+    .product--prices p:nth-child(2) {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .image--div img {
+        width: 134.21px;
+        height: 136.27px;
+    }
+
+    .total--1 span:nth-child(1),
+    .total--2 span:nth-child(1) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    .checkbox {
+
+        gap: 11px;
+    }
+
+    .checkbox .chk {
+        width: 21px;
+        height: 21px;
+    }
+
+    .checkbox p {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
