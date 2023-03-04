@@ -410,7 +410,7 @@ header {
         max-width: 962px;
 
         flex-direction: row-reverse;
-        justify-content: space-between;
+        gap: 113px;
         margin: auto;
     }
 
