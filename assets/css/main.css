@@ -265,7 +265,7 @@ header {
     width: 100%;
     /* Gray 3 */
 
-    color: #828282;
+    color: #333333;
     border: none;
     padding: 10px;
 }
@@ -303,18 +303,38 @@ header {
     overflow-y: scroll;
     top: 65px;
     border-radius: 15px;
-    padding: 13px 10px;
+   
     left: 0;
+    padding: 15px 0;
+    
+}
+.city__menu h5 {
+    text-align: center;
 }
 .show__menu {
-    display: block!important;    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+.item__menu {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item__menu:hover{
+    background-color: var(--orange);
+    border: solid 1px #ee7811;
+    color: white;
 }
 /*class to errro validate*/
 
-.error--validate {
+.error--validate .input--icon{
     border-width: 2px;
     border-color: #842029;
-
 }
 
 .error--validate input,
@@ -322,6 +342,6 @@ header {
     color: #842029 !important;
 }
 
-.error--validate span {
+.error--validate span, .error--validate label {
     color: #842029;
 }
