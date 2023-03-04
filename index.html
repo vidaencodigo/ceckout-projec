@@ -19,6 +19,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
   </style>
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./libs/alerts/src/css/myalert.css">
   <style>
     .material-symbols-outlined {
       font-variation-settings:
@@ -35,7 +36,7 @@
   <header>
     <h1>Checkout</h1>
   </header>
-  <main class="checkout">
+  <main class="checkout c_alert">
     <form class="checkout--form" id="my__form">
       <section class="checkout--products">
         <div class="product">
@@ -113,7 +114,7 @@
           <article class="contact">
             <h3>Contact information</h3>
             <div class="information">
-              <div class="control--group">
+              <div class="control--group validity">
                 <label for="email">E-mail</label>
                 <div class="input--icon">
                   <span class="material-symbols-outlined ch-icon">
@@ -123,7 +124,7 @@
                 </div>
               </div>
 
-              <div class="control--group">
+              <div class="control--group validity">
                 <label for="phone">Phone</label>
                 <div class="input--icon">
                   <span class="material-symbols-outlined ch-icon">
@@ -139,7 +140,7 @@
           <article class="shipping">
             <h3>Shipping address</h3>
             <div class="information">
-              <div class="control--group">
+              <div class="control--group validity">
                 <label for="f_name">Full name</label>
                 <div class="input--icon">
                   <span class="material-symbols-outlined ch-icon">
@@ -149,7 +150,7 @@
                 </div>
               </div>
 
-              <div class="control--group">
+              <div class="control--group validity">
                 <label for="address">Address</label>
                 <div class="input--icon">
                   <span class="material-symbols-outlined ch-icon">
@@ -159,7 +160,7 @@
                 </div>
               </div>
 
-              <div class="control--group">
+              <div class="control--group validity">
                 <label for="city">City</label>
                 <div class="input--icon">
                   <span class="material-symbols-outlined ch-icon">
@@ -170,7 +171,7 @@
               </div>
 
               <div class="d-f">
-                <div class="control--group city__rel">
+                <div class="control--group validity city__rel">
                   <label for="country">Country</label>
                   <div class="input--icon">
                     <span class="material-symbols-outlined ch-icon">
@@ -186,7 +187,7 @@
                   </div>
                 </div>
 
-                <div class="control--group">
+                <div class="control--group validity">
                   <label for="postal_code">Postal code</label>
                   <div class="input--icon">
                     <span class="material-symbols-outlined ch-icon">
@@ -200,7 +201,7 @@
             </div>
           </article>
         </div>
-        <button type="button" class="btn--success">Continue</button>
+        <button type="button" onclick="validation()" class="btn--success">Continue</button>
       </section>
 
 
@@ -208,7 +209,10 @@
   </main>
 
   <script src="./assets/js/countries.js"></script>
+  <script src="./libs/alerts/src/js/myAlert.js"></script>
   <script>
+
+    const errors = []
     /*
     Product event
     */
@@ -234,14 +238,66 @@
 
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const mail = document.querySelector("#mail");
-      const phone = document.querySelector("#phone");
-      const f_name = document.querySelector("#f_name");
-      const address = document.querySelector("#address");
-      const country = document.querySelector("#country");
-      const postal_code = document.querySelector("#postal_code");
-    })
+
+
+    function validation() {
+      const arr_contenedores = document.querySelectorAll(".validity");
+
+
+
+      arr_contenedores.forEach(el => {
+        let obj = el.getElementsByTagName('input').item(0);
+        if (!obj.checkValidity()) {
+          el.classList.add("error--validate");
+
+          if (!errors.includes(el)) {
+            errors.push(el)
+          }
+        } else {
+          el.classList.remove("error--validate");
+          if (errors.includes(el)) {
+            errors.pop(el)
+          } else {
+            errors.pop(el)
+          }
+
+        }
+      })
+
+      if (errors.length > 0) {
+        const alerta = new MyAlert();
+        alerta.text = "Please fill out all fields";
+        alerta.type_a = "error";
+        alerta.btn_text = "Close"
+        alerta.create__alert();
+        // setTimeout(() => {
+        //   alerta.destroy__alert();
+        // }, 3000);
+      }
+
+      success()
+
+    }
+
+    function success() {
+      if (errors.length == 0) {
+        const alerta = new MyAlert();
+        alerta.text = "Success";
+        alerta.type_a = "success";
+        alerta.btn_text = "Close"
+        alerta.create__alert();
+        setTimeout(() => {
+          alerta.destroy__alert();
+        }, 3000);
+        setTimeout(() => {
+          document.querySelector("#my__form").reset();
+        }, 1000);
+
+      }
+    }
+
+
+
   </script>
 </body>
 
